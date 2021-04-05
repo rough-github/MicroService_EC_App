@@ -1,0 +1,35 @@
+{
+  "name": "expiration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-init": "tsc --init",
+    "start": "ts-node-dev src/index.ts",
+    "test": "jest --watchAll --no-cache",
+    "gitpush": "git add . && git commit -m \"Logs\" && git push origin master",
+    "updates": "npm update @roughtickets/common"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@roughtickets/common": "^1.0.15",
+    "bull": "^3.22.0",
+    "node-nats-streaming": "^0.3.2"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.15.0",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.3",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
+  }
+}

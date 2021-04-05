@@ -1,0 +1,10 @@
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
+
+delete
+kubectl delete namespace ingress-nginx
+
+search
+kubectl get services -n ingress-nginx
+
+address from another namespace
+"http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser"
